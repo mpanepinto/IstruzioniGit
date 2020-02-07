@@ -28,6 +28,3 @@ Aggiunti i file all'indice locale si committa sul git locale:
 
 Solo a questo punto si può fare la push sul repository Github remoto:
 	git push
-	
-Se vengono modificati dei file su github posso procedere con il recupero il fetch:
-	git fetch
