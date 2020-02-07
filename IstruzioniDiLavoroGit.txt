@@ -1,0 +1,30 @@
+Uitlizzare il client (Windows) di git scaribale: https://git-scm.com/download/win
+Installare GIT e GitFork
+Lanciare Gitbash
+(se necessario settare il proxy del CSI - queste operazioni devono essere fatte sempre quando si lancia la bash):
+# SETTARE IL PROXY
+	git config --global http.proxy http://proxy.csi.it:3128
+	git config --global https.proxy http://proxy.csi.it:3128
+)
+Posizionarsi nella working directory:
+	cd D:/....../WorkingDirectory
+
+Clonare il repository github remoto (deve essere esistente):
+	git clone https://......git
+Questo comando permette di creare il collegamento con il repository di Github. Si può fare anche successivamente con git remote, ma ci si deve posizionare sulla directory locale precedentemente inizializzata:
+	git remote add nomeprodotto ../directorylocale
+Nel caso non sia stato effettuato il clone si deve inizializzare il git locale, posizionandosi sulla directory del repository, con:
+	git init
+
+Ogni volta che si vuole vedere lo stato dei file della working directory locale in cui si è posizionati si lancia il comando:
+	git status
+
+Una volta aggiunti tutti i file nella directory locale si aggiungono all'indice git locale per procedere con la commit:
+	git add --all 
+
+Aggiunti i file all'indice locale si committa sul git locale:
+	git commit -m "messaggio" 
+	es. git commit -m "[SG] Prima versione del progetto"
+
+Solo a questo punto si può fare la push sul repository Github remoto:
+	git push
